@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.sproject.dao.admin.AdminDao">
+
+	<select id="memberCntOfAdmin" resultType="int">
+		SELECT COUNT(*) FROM MEMBER WHERE m_status IN (1)
+	</select>
+	
+	<select id="memberListOfAdmin" parameterType="com.example.sproject.model.login.Member" resultType="com.example.sproject.model.login.Member">
+    <![CDATA[
+         select * from (select rownum rn, a.m_id, a.m_name, a.m_empnum, a.m_birth, a.m_phone, a.m_email, d.dpt_name, p.pt_name from 
+		 (select * from member where m_status IN (1) order by m_name) a, position p, department d 
+		 where a.dpt_code = d.dpt_code and a.pt_code = p.pt_code) 
+    	 where rn >= #{start} and rn <= #{end} 
+     ]]>	 
+    </select>
+<update id="selectAdminGroupOfAdmin" parameterType="Map">
+		UPDATE member SET pt_code = #{pt_code}  WHERE m_id = #{m_id}
+	</update>
+<!-- 	<delete id="boardDeleteGroup" parameterType="int"> -->
+<!-- 		delete from post where pt_code= #{pt_code} -->
+<!-- 	</delete> -->
+	<update id="adminPassWordChangeGroupOfAdmin" parameterType="Map">
+		UPDATE member SET m_password = #{m_password}  where m_id = #{m_id}
+	</update>
+	<delete id="DeleteBoardGroupOfAdmin" parameterType="string">
+		delete from member where m_id= #{m_id}
+	</delete>
+	<select id="checkedIDMemberOfAdmin" parameterType="String" resultType="int">
+	 SELECT COUNT(*) 
+		FROM   MEMBER
+		WHERE  m_id = #{m_id}
+	</select>
+	
+	
+	<select id="memberAllListOfAdmin" resultType="com.example.sproject.model.login.Member">
+	    SELECT 
+		 m.dpt_code
+		,(select dpt_name from department where 1=1 and dpt_code = m.dpt_code) as dpt_name 
+		,COUNT(dpt_code) AS dpt_count from member m 
+		where 1=1
+		and dpt_code is not null
+		GROUP BY m.dpt_code
+    </select>
+	
+	
+	<select id="TimeListOfAdmin" resultType="com.example.sproject.model.time.Time">
+	    select substr(tm_sdate,1,10) date_cnt, count(*) cnt from time where tm_type = 2 and substr(tm_sdate,1,10) = TO_CHAR(SYSDATE-1,'YYYY-MM-DD') 
+		or substr(tm_sdate,1,10) = TO_CHAR(SYSDATE-2,'YYYY-MM-DD') 
+ 		or substr(tm_sdate,1,10) = TO_CHAR(SYSDATE-3,'YYYY-MM-DD')
+ 		or substr(tm_sdate,1,10) = TO_CHAR(SYSDATE-4,'YYYY-MM-DD')
+   		or substr(tm_sdate,1,10) = TO_CHAR(SYSDATE-5,'YYYY-MM-DD')
+    	or substr(tm_sdate,1,10) = TO_CHAR(SYSDATE-6,'YYYY-MM-DD')
+     	or substr(tm_sdate,1,10) = TO_CHAR(SYSDATE-7,'YYYY-MM-DD') group by substr(tm_sdate,1,10) order by date_cnt
+    </select>
+	
+	
+	<select id="member_PositionListOfAdmin" parameterType="com.example.sproject.model.login.Member" resultType="com.example.sproject.model.login.Member">
+	 select m.*, p.pt_name from member m, position p
+	where m.pt_code=p.pt_code and m.pt_code = #{pt_code}
+    </select>
+</mapper>

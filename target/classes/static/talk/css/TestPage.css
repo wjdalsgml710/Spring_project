@@ -1,0 +1,392 @@
+@charset "UTF-8";
+
+@font-face {
+   font-family: "Do Hyeon";
+   src: url("/talk/img/DoHyeon-Regular.ttf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+}
+
+#TestCircle {
+	position: fixed;
+    bottom: 25px;
+    left: 25px;	
+}
+
+#Test {
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	background-color: transparent;
+	margin-bottom: 100px;
+}
+
+#Test img {
+	position: absolute;
+}
+
+.blue_circle {
+	position: absolute;
+	border-radius: 70%;
+	background-color: #0f91e6;
+	width: 30px;
+	height: 30px;
+	color: white;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/* =========================== Modal ===================================== */
+
+
+.input {
+   width: 494px;   
+   height: 25px;
+   border: 1px solid #c0c0c0;
+   border-radius: 4px;
+}
+
+.chatModal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   margin-top: 150px;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+/*    background-color: rgb(0, 0, 0); Fallback color */
+/*    background-color: rgba(0, 0, 0, 0.4); Black w/ opacity */
+}
+
+#chatting {
+/* 	display: none; */
+}
+
+#back {
+	border: 0px;
+	outline: 0px;
+	background-color:transparent;
+}
+
+#content2 {
+    		position: relative;
+    		background-color: white;
+    		width: 140px;
+    		height: 500px;
+    		overflow: scroll;
+    		overflow-x: hidden;
+    		margin-top: 40px;
+}
+
+#content2::-webkit-scrollbar{ 
+			display: none;
+}
+
+#content2:hover::-webkit-scrollbar{
+		display: block; 
+		width: 20px;
+}
+ 
+#content2::-webkit-scrollbar-thumb {
+  		background-color: #0f91e6;
+  		border-radius: 10px;
+}
+#content2::-webkit-scrollbar-track {
+		background-color: lightgray;
+		border-radius: 10px;
+		box-shadow: inset 0px 0px 5px white;
+}
+
+#member {
+	position: relative;
+	float: left;
+}
+
+#member img {
+	width: 55px;
+	height: 55px;
+}
+
+.onebyone {
+	border: 0;
+    outline: 0;
+    background-color: #0f91e6;
+    margin-left: 62px;
+    height: 73px;
+    border-top: 1px solid white;
+    border-radius: 0px 0px 0px 35px / 0px 0px 0px 35px;
+    width: 105px;
+}
+
+#group_circle {
+	float: left;
+}
+
+#chat_button {
+	float: left;
+	position: relative;
+}
+
+.group {
+    border: 0;
+    outline: 0;
+    background-color: #0f91e6;
+    height: 73px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    width: 105px;
+}
+
+#group_circle img {
+	width: 35px;
+	height: 35px;
+}
+
+.total {
+	text-align: center;
+    margin-left: 55px;
+    float: right;
+    background-color: red;
+}
+
+#makeGroupButton {
+	float: left;
+}
+
+#makeGroupButton img {
+	width: 40px;
+	height: 40px;
+}
+
+#makegroup {
+	height: 500px;
+    /* border: 1px solid black; */
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 20%);
+}
+
+.groupchat {
+	border: 0;
+    outline: 0;
+    background-color: #0f91e6;
+    height: 73px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    width: 109px;
+    border-radius: 0px 0px 35px 0px / 0px 0px 35px 0px;
+}
+
+.groupCheckbox {
+	width: 50px;
+	height: 20px;
+}
+
+.insertroom {
+	width: 80px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #0f91e6;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 23px;
+    margin-top: 20px;
+}
+
+#join_member {
+	border: 0px;
+	outline: 0px;
+	background-color:transparent;
+}
+
+.chating .me2{
+			color: white;
+    		text-align: center;
+    		border-radius: 20px;
+    		line-height: 40px;
+    		float: right;
+    		font-size: 18px;
+    		position: relative;
+    		font-weight: bold;
+		}
+.chating .date3{
+			float: right;
+			font-size: 12px;
+			padding-right: 7.5px;
+			text-align: right;
+			margin-top: 80px;
+			position: relative;
+		}
+.chating .others2{
+			color: black;
+    		text-align: center;
+    		border-radius: 20px;
+    		margin-bottom: 10px;
+    		line-height: 40px;
+    		float: left;
+    		font-size: 18px;
+    		position: relative;
+    		padding-left: 15px;
+    		padding-right: 15px;
+    		font-weight: bold;
+			}
+.chating .date4{
+			float: left;
+			font-size: 12px;	
+			padding-left: 7.5px;
+			position: relative;
+		}
+		
+#memo2 {
+			height: 200px;
+			
+		}
+		
+.button_x3 {
+	cursor: pointer;
+	display:inline-block;
+	float: right;
+	width: 25px;
+	height: 25px;
+}
+
+.button_x3 img {
+	width: 25px;
+    height: 25px;
+    padding-top: 2px;
+}
+
+#groupRoomlist #img_set {
+	text-align: center;
+	padding: 5px;
+	width: 80px;
+}
+
+#groupRoomlist #img1_1 {
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+}
+
+#groupRoomlist #img1_2 {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;	
+}
+
+#groupRoomlist #img1_3 {
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+}
+
+#groupRoomlist #img2_1 {
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+#groupRoomlist #img2_2 {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+#groupRoomlist #img2_3 {
+	width: 50px;
+	height: 50px;
+	border-radius: 20px;
+}
+
+#groupRoomlist #img3 {
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+}
+
+.phone_bg img {
+	position: absolute;
+	width: 450px;
+}
+
+.phone_bg2 img {
+	position: absolute;
+	width: 450px;
+}
+.talkBox {
+}
+
+.talkBox img {
+	width: 200px;
+    height: 200px;
+    margin-top: 150px;
+    position: rea;
+    position: absolute;
+    float: left;
+}
+
+#join_member_list {
+	height: 50px;
+    /* width: 200px; */
+    position: relative;
+    float: left;
+    /* margin-right: 100px; */
+    margin-top: 205px;
+    margin-left: 65px;
+    font-size: 25px;
+    font-weight: bold;	
+}
+#chat2 {
+	border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 25px;
+    margin-left: 20px;
+    font-family: "Do Hyeon";
+}
+#chat {
+	border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 25px;
+    font-family: "Do Hyeon";
+}
+.circle3 {
+	border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #0f91e6;
+    text-align: center;
+    line-height: 26px;
+    padding-right: 2px;
+    color: white;
+    margin-top: 30px;
+}
+.rnUnreadNum {
+	position: relative;
+}
+
+.unReadNum1 {
+	float: right;
+    margin-right: 10px;
+    /* margin-bottom: 20px; */
+    font-size: 13px;
+    color: #0f91e6;
+    font-weight: bold;
+    line-height: 10px;
+}
+
+.unReadNum2 {	
+	float: left;
+    margin-left: 10px;
+    /* margin-bottom: 20px; */
+    font-size: 13px;
+    color: #0f91e6;
+    font-weight: bold;
+    margin-top: 7px;
+}

@@ -1,0 +1,72 @@
+# http port set
+server:
+  port: 8484
+
+spring:
+  # Oracle Connect
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/xe
+#    url: jdbc:oracle:thin:@database-1.caws40aplln4.ap-northeast-2.rds.amazonaws.com:1521/ORCL
+    username: S20210703
+    password: tiger
+    driver-class-name: oracle.jdbc.OracleDriver
+  # ORM JPA
+  jpa:
+    hibernate:
+      ddl-auto: none # create
+    properties:
+      hibernate:
+      show_sql: true
+      format_sql: true
+  # gmail Transfer 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ttaekwang3@gmail.com
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+          
+  #view resolver(Templete ->JSP Use)
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    #SummerNote 위한 설정
+    converters:
+      preferred-json-mapper: gson
+  
+  devtools:
+    livereload:
+      enabled: true  
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+# Mybatis 
+mybatis:
+  # dto Location
+  type-aliases-package: com.example.sproject.model
+  # xml Location
+  config-location: classpath:configuration.xml
+  mapper-locations: classpath:mappers/**/*.xml
+      
+#logging.level:
+#  org.hibernate.SQL: debug
+  # org.hibernate.type: trace
+
+project-value:
+  mailgun:
+    api-key: 5150169a7673f68ae4784ffe9e9cb016-9ad3eb61-8f816df4
+    smtp-password: df2bc287de015d79f37d3f8697fc4257-9776af14-e332c25c
+  mail:
+    id: ino210714@gmail.com
+    password: dprls89632!@
+  improvmx:
+    smtp-password: eQAp65lCMmz4
+
+  

@@ -1,0 +1,360 @@
+@charset "UTF-8";
+/* 기본 */
+.txt {
+	margin: 0 0 0 4px;
+	display: inline-block;
+	font-size: 17px;
+}
+
+.ic_toolbar {
+	height: 26px;
+}
+
+#content_top button, #content_bottom button, .button {
+	float: left;
+	margin: 0 8px 0 0;
+	height: 30px;
+	line-height: 30px;
+	background: none;
+	border: 0;
+	color: #333;
+	display: inline-block;
+	cursor: pointer;
+	padding: 0 8px;
+	border-radius: 2px;
+	font-size: 15px;
+	vertical-align: middle;
+}
+
+#content_top button:hover, #content_bottom button:hover, .button:hover {
+	background: #eee;
+}
+
+span.title {
+	font-size: 18px;
+	margin-right: 14px;
+}
+
+/* End of 기본 */
+
+/* 새 결재라인 모달창 */
+/* 모달창 뒤 배경 */
+.black_bg {
+	display: none;
+	position: absolute;
+	content: "";
+	width: 1000%;
+	height: 1000%;
+	background-color: rgba(0, 0, 0, 0.3);
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.sign_line_txt {
+	left: 55px;
+	bottom: 2px;
+	font-size: 16px;
+}
+
+#sortable {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 60%;
+	margin-bottom: 24px;
+}
+
+#sortable li {
+	margin: 0 3px 3px 3px;
+	padding: 0.4em;
+	padding-left: 1.5em;
+	font-size: 1.4em;
+	height: 8px;
+	position: relative;
+	background: #fafbfd;
+}
+
+#sortable li span {
+	position: absolute;
+	margin-left: -1.3em;
+}
+
+/* 새 결재라인 모달창 */
+.modal_wrap {
+	display: none;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -250px 0 0 -250px;
+	z-index: 2;
+	border-radius: 4px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 20%);
+}
+
+.button_x {
+	background-color: white;
+    border: 0;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+	top: 22px;
+    right: 23px;
+    cursor: pointer;
+}
+
+.modal_wrap h1 {
+	color: #000;
+    font-weight: normal;
+    font-size: 25px !important;
+    margin: 17px;
+}
+
+
+.modal_wrap .modal_content {
+	position: absolute;
+	width: 90%;
+    height: 300px;
+	top: 81px;
+}
+
+#sign_line_form_list {
+	overflow: scroll;
+	height: 393px;
+    margin-left: 34px;
+    overflow-x: hidden;	
+}
+
+#modal_close_new_sign_line {
+	float: none !important;
+}
+
+.button_new_sign_line_member {
+	float: none !important; 
+}
+/* End of 새 결재라인 모달창 */
+
+/* 결재하기, 반려하기 모달창 */
+#modal_wrap_approval, #modal_wrap_return {
+	height: 139px;
+}
+
+#modal_wrap_approval button, #modal_wrap_return button {
+	font-size: 20px;
+}
+
+#modal_wrap_approval #button_approval_yes, #modal_wrap_return #button_return_yes {
+	margin-left: 365px;
+}
+
+/* End of 결재하기 모달창 */
+
+/* content_top */
+#content_top {
+	padding: 24px;
+	border-bottom: 2px solid #EAEAEA;
+	height: 104px;
+}
+
+#content_top h1 {
+	font-size: 32px;
+	font-weight: normal;
+	letter-spacing: -1px;
+	margin-bottom: 35px;
+}
+
+#content_top h1.sign_line_title {
+	margin-bottom: 15px;
+}
+
+#content_top h1 span {
+	font-size: 18px;
+	color: #999;
+	vertical-align: middle;
+}
+
+
+
+/* table 기본 */
+#div_content_container table td {
+	border: 1px solid black;
+	padding: 6px 9px;
+}
+
+#div_content_container table .td_head {
+	background: rgb(221, 221, 221);
+	font-weight: bold;
+	text-align: center;
+	font-size: 18px;
+}
+
+#div_content_container table .td_style_short {
+	width: 120px;
+}
+
+#div_content_container table .td_style_middle {
+	width: 350px;
+}
+
+#div_content_container table .td_style_long {
+	width: 700px;
+}
+
+#div_content_container table .td_style_100per {
+	width: 100%;
+}
+
+#div_content_container table .td_style_height_middle {
+	height: 113px;
+}
+
+#div_content_container table .td_no_border {
+	border: 1px solid transparent !important;
+	background-color: transparent !important;
+	vertical-align: top;
+}
+
+#div_content_container table .td_bottom_border {
+	border-top: 1px solid transparent !important;
+	border-left: 1px solid transparent !important;
+	border-right: 1px solid transparent !important;
+	border-bottom: 1px solid black !important;
+	background-color: transparent !important;
+	vertical-align: top;
+}
+
+#div_content_container table .td_right_border {
+	border-top: 1px solid transparent !important;
+	border-left: 1px solid transparent !important;
+	border-bottom: 1px solid transparent !important;
+	border-right: 1px solid black !important;
+	background-color: transparent !important;
+	vertical-align: top;
+}
+
+#div_content_container table .td_right_bottom_border {
+	border-top: 1px solid transparent !important;
+	border-left: 1px solid transparent !important;
+	border-bottom: 1px solid black !important;
+	border-right: 1px solid black !important;
+	background-color: transparent !important;
+	vertical-align: top;
+}
+
+#div_content_container table input {
+	font-size: 18px;
+/* 	width: 100%; */
+	border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+#div_content_container table textarea.textarea_full {
+	width: 96%;
+	height: 77%;
+	resize: none;
+	padding: 5px;
+}
+
+/* End of table 기본 */
+
+/* 결재 양식 */
+#div_content_wrap {
+	margin: 23px;
+	border: 5px solid #e8e8e8;
+	/*     width: 80%; */
+	width: 1100px;
+	min-width: 1118px;
+	padding: 18px;
+	padding-bottom: 49px;
+	margin-top: 15px;
+}
+
+#div_content_container {
+	width: 1100px;
+	margin-bottom: 25px;
+}
+
+#div_content_container h1.sgf_name {
+	margin-top: 26px;
+	text-align: center;
+	margin-bottom: 41px;
+	font-size: 55px;
+}
+
+#div_content_container table {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+/* sign_info */
+#div_content_container table#tb_sign_info {
+	float: left;
+	width: 390px;
+	margin-bottom: 45px;
+}
+
+#div_content_container table#tb_sign_info .td_head {
+	width: 107px
+}
+
+/* End of sign_info */
+#div_content_container table.tb_sign_line {
+	float: left;
+	margin-left: 10px;
+}
+
+#div_content_container table.tb_sign_line td {
+	text-align: center;
+	padding: 5px 16px;
+}
+
+#div_content_container table.tb_sign_line td.td_head {
+	width: 15px;
+	padding: 6px;
+}
+
+#div_content_container table.tb_sign_line td.td_rank {
+	height: 26px;
+}
+
+#div_content_container table.tb_sign_line td.td_name {
+	height: 75px;
+}
+
+#div_content_container table.tb_sign_line td.td_date {
+	height: 26px;
+	padding: 5px 7px;
+	width: 85px;
+}
+
+#div_content_container #sign_line_wrap {
+	float: right;
+	padding-top: 37px;
+}
+
+#div_content_container #div_content {
+	clear: both;
+}
+
+/* content 테이블 */
+#div_content_container #div_content #tb_content {
+	margin: 0 auto;
+	width: 100%;
+}
+
+#div_content_container #div_content #tb_content #td_content {
+	padding-top: 27px;
+	padding-bottom: 47px;
+	padding-left: 17px;
+}
+
+/* End of content 테이블 */
+
+#content_bottom {
+	height: 100px;
+	padding: 24px;
+	padding-top: 5px;
+}

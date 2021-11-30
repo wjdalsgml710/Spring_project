@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sproject.dao.login.LoginDao">
+
+	<select id="selectOneMemberOfLogin" parameterType="java.lang.String" resultType="com.example.sproject.model.login.Member">
+		SELECT m.*, d.dpt_name, p.pt_name, p.pt_order 
+		FROM member m, department d, position p 
+		WHERE m_id = #{m_id} AND m.dpt_code = d.dpt_code(+) AND m.pt_code = p.pt_code(+)
+	</select>
+	
+	<insert id="insertMemberOfLogin" parameterType="com.example.sproject.model.login.Member">
+		INSERT INTO member (m_id, m_password, m_name, m_empnum, m_birth, m_phone, m_email, m_status,dpt_code, pt_code) VALUES (#{m_id}, #{m_password}, #{m_name}, #{m_empnum}, #{m_birth}, #{m_phone}, #{m_email}, 1,#{dpt_code},#{pt_code})
+	</insert>
+	
+	<select id="selectListAuthoritiesOfLogin" parameterType="java.lang.String" resultType="java.lang.String">
+		SELECT at_id FROM MEMBER_AUTHORITIES WHERE m_id = #{m_id}
+	</select>
+
+	<update id="updateLastdateOfMember" parameterType="String">
+		UPDATE member SET m_lastdate = SYSDATE WHERE m_id = #{m_id}
+	</update>
+	
+	<select id="updateMemberPhotoOfLogin" parameterType="Map">
+		UPDATE member SET m_photo = #{m_photo} WHERE m_id = #{m_id}
+	</select>
+</mapper>

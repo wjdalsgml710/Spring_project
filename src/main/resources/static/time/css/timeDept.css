@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+#head_time{
+	background-color: #4374D9;
+}
+/* ======================== Div Side ============================= */
+
+.btn1 {
+	font-family: 'Noto Sans KR',맑은 고딕,돋움, malgun gothic, dotum,AppleGothic,Helvetica,sans-serif;
+	background-color : white;
+	border-style: solid;
+	border-radius : 10px;
+	border-width : 2px;
+	box-shadow: none;
+	border-color : #0f91e6;
+	padding : 5% 5%;
+	margin-left : 5%;
+	width: 42%;
+	font-size: 16px;   
+	color : #0f91e6;
+}
+
+.btn1:hover{
+     transition: all 0.2s linear;
+     transform: translate(0, -5%);
+       box-shadow: 2px 2px 2px 2px #BDBDBD; 
+       border: 2px solid #0f91e6;
+  
+ }
+ 
+ .btn3 {
+	font-family: 'Noto Sans KR',맑은 고딕,돋움, malgun gothic, dotum,AppleGothic,Helvetica,sans-serif;
+	background-color : white;
+	border-style: solid;
+	border-radius : 10px;
+	border-width : 2px;
+	box-shadow: none;
+	border-color : #D5D5D5;
+	padding : 5% 5%;
+	margin-left : 5%;
+	width: 42%;
+	font-size: 16px;   
+	color : #CFCFCF;
+}
+ 
+ 
+ .btn2 {
+	font-family: 'Noto Sans KR',맑은 고딕,돋움, malgun gothic, dotum,AppleGothic,Helvetica,sans-serif;
+	background-color : white;
+	border-style: solid;
+	border-radius : 10px;
+	border-width : 2px;
+	box-shadow: none;
+	border-color : #D5D5D5;
+	padding : 5% 5%;
+	margin-left : 10%;
+	margin-top : 5%;
+	width: 80%;
+	font-size: 16px;   
+}
+
+.btn2:hover{
+     transition: all 0.2s linear;
+     transform: translate(0, -5%);
+       box-shadow: 2px 2px 2px 2px #BDBDBD; 
+       border: 2px solid gray;
+  
+ }
+ 
+ .button1{	
+  	margin-left: 3%;
+  	font-family: 'Noto Sans KR',맑은 고딕,돋움, malgun gothic, dotum,AppleGothic,Helvetica,sans-serif;
+  	font-size: 17px;
+  	cursor: pointer;
+ }
+
+#scroll {
+	margin-left: 18%;
+}
+
+#div2 {
+	margin-top: 7%;
+}
+
+.li {
+	font-family: 'Noto Sans KR',맑은 고딕,돋움, malgun gothic, dotum,AppleGothic,Helvetica,sans-serif;
+  	font-size: 17px;
+  	line-height: 20px;
+  	padding-top: 10px;
+  	padding-bottom: 7px;
+}
+
+#span_hover{
+	display: none;
+}
+@-webkit-keyframes fadein {
+        /* Safari and Chrome */
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+/*     @-webkit-keyframes fadeout { */
+/*         Safari and Chrome */
+/*         from { */
+/*             opacity: 1; */
+/*         } */
+/*         to { */
+/*             opacity: 0; */
+/*         } */
+/*     } */
+#side:hover #span_hover {
+    display: inline;	
+    -webkit-animation: fadein 1s;
+}
+
+#side:hover #span_none {
+    display: none;
+}
+
+/* 시계 */
+#clock {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#clock1 {
+	color: #8C8C8C;
+	font-weight: bold;
+	margin-left: 40px;
+}
+
+#clock2 {
+	margin-left: 50px;
+	font-size: 47px;
+	color: #5D5D5D;
+}
+
+.clock3 {
+	font-weight: bold;
+	margin-left: 25px;
+	line-height: 35px;
+	font-size: 15px;
+}
+
+.clock4 {
+	float: right;
+	margin-right: 15px;
+	font-size: 15px;
+	line-height: 35px;
+}
+
+
+a {
+	color : black;
+	text-decoration: none;
+}
+
+/* ========================== Content ========================== */
+
+#content1 {
+	font-weight: normal;
+	margin: 50px 30px;
+	font-size: 24px;
+}
+
+#calendar_head {
+	font-weight: bold;
+	font-size: 26px;
+	display: block;
+	margin-left: 35%;
+}
+
+#calendar {
+	margin-top: 50px;
+	margin-left: 50px;
+	width: 95%;
+	border-collapse : collapse;
+}
+
+#calendar tr td {
+	width: 11%;
+}
+
+#calendar_member {
+	margin-top: 50px;
+	margin-left: 50px;
+	border-collapse : collapse;
+}
+
+#calendar_member tr {
+	height: 70px;
+}
+#calendar_member tr:hover{
+	background-color: #EBF7FF;
+}
+#calendar_member tr td {
+	width: 168px;
+	vertical-align: top;
+}
+
+.td_span1{
+	padding-top : 20px;
+	font-size: 14px;
+	display: block;
+	font-weight: bold;
+}
+
+.td_span2{
+	color:#888; 
+	font-size: 14px;
+	display: block;
+	padding-top: 15px;
+}
+
+.add_time{
+	padding-top : 20px;
+	font-size: 14px;
+	display: block;
+	font-weight: bold;
+}
